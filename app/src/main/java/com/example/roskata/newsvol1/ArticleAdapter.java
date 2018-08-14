@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ArticleAdapter extends ArrayAdapter<Article> {
 
@@ -46,8 +47,9 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         if (holder != null) {
 
+            String articleSection = currArticle.getSection();
             if (currArticle.getSection() != null) {
-                holder.section.setText(currArticle.getSection());
+                holder.section.setText(articleSection);
             } else {
                 holder.section.setVisibility(View.GONE);
             }
@@ -58,8 +60,8 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
             holder.publishedDate.setText(currArticle.getFormattedDate());
 
-            if (currArticle != null) {
-                String imgUrl = currArticle.getImageUrl();
+            String imgUrl = currArticle.getImageUrl();
+            if (currArticle.getImageUrl() != null) {
                 Picasso.get().load(imgUrl).into(holder.imageView);
             } else {
                 holder.imageView.setVisibility(View.GONE);
