@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">News App Vol.1</string>
+    <string name="no_connection">There is no internet connection available.</string>
+    <string name="no_data">Currently there are no news for you. Please come back later and try again.</string>
+
+    <!-- NEWS ITEM STRINGS-->
+    <string name="sectionName">Section</string>
+    <string name="article_title">Title</string>
+    <string name="by">by</string>
+    <string name="authorName">John Doe</string>
+    <string name="article_img">Article Image</string>
+    <string name="articleDate">4.03.2018 15:45:00</string>
+    <string name="articleTime">15:45:00</string>
+</resources>
